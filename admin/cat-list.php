@@ -15,6 +15,7 @@
      <ul>
           <?php while( $row = mysqli_fetch_assoc($result)): ?>
                <li title="<?php echo $row['remark'] ?>">
+                    [ <a href = "cat-del.php?id=<?php echo $row['id'] ?>" method = "get" class="del" > del </a> ]
                     <?php echo $row['name'] ?>
                </li>
           <?php endwhile; ?>
