@@ -15,10 +15,13 @@
      <ul>
           <?php while( $row = mysqli_fetch_assoc($result)): ?>
                <li title="<?php echo $row['remark'] ?>">
+                    [ <a href="cat-edit.php?id=<?php echo $row['id'] ?>"> edit </a> ]
                     [ <a href = "cat-del.php?id=<?php echo $row['id'] ?>" method = "get" class="del" > del </a> ]
                     <?php echo $row['name'] ?>
                </li>
           <?php endwhile; ?>
      </ul>
+
+     <a href="cat-new.php" class="new"> New Category </a>
 </body>
 </html>
