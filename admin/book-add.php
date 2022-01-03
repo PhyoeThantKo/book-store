@@ -9,15 +9,13 @@
      $cover = $_FILES['cover']['name'];
      $tmp = $_FILES['cover']['tmp_name'];
 
-     if($cover){
+     if($cover) {
           move_uploaded_file($tmp, "covers/$cover");
      }
 
-     $sql = "INSERT INTO books (
-          title, author, summary, price, category_id, cover, created_date, modified_date
-     ) VALUES ($title, $author, $summary, $price, $category_id, $cover, now(), now()";
+     $sql = "INSERT INTO books ( title, author, summary, price, category_id, cover, created_date, modified_date ) VALUES (
+          '$title', '$author', '$summary', '$price', '$category_id', '$cover', now(), now() )";
 
      mysqli_query($conn, $sql);
-
-     header("loaction: book-list.php");
+     header("location: book-list.php");
 ?>
