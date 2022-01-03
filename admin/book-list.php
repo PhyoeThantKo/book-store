@@ -21,7 +21,7 @@
      <ul class="books">
           <?php while($row = mysqli_fetch_assoc($result)): ?>
           <li>
-               <img src="covers/<?php echo $row['cover'] ?>" alt="" align="right" height="140">
+               <img src="covers/<?php echo $row['cover'] ?>" align="right" >
                <b><?php echo $row['title'] ?></b>
                <i>by <?php echo $row['author'] ?></i>
                <small>(in <?php echo $row['name'] ?>)</small>

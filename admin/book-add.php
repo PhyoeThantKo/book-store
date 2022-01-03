@@ -10,7 +10,7 @@
      $tmp = $_FILES['cover']['tmp_name'];
 
      if($cover) {
-          move_uploaded_file($tmp, "/covers/$cover");
+          move_uploaded_file($tmp, "covers/$cover");
      }
 
      $sql = "INSERT INTO books ( title, author, summary, price, category_id, cover, created_date, modified_date ) VALUES (
