@@ -9,6 +9,14 @@
 </head>
 <body>
      <h1>Book List</h1>
+
+     <ul class="menu">
+          <li><a href="book-list.php">Manage Books</a></li>
+          <li><a href="cat-list.php">Manage Categories</a></li>
+          <li><a href="orders.php">Manage Orders</a></li>
+          <li><a href="logout.php">Logout</a></li>
+     </ul>
+
      <?php
           include("confs/config.php");
 
