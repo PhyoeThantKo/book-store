@@ -8,6 +8,7 @@
      <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+     <?php include("confs/auth.php") ?>
      <h1> Category list </h1>
 
      <ul class="menu">

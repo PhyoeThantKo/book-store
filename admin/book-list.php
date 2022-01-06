@@ -17,6 +17,7 @@
           <li><a href="logout.php">Logout</a></li>
      </ul>
 
+     <?php include("confs/auth.php") ?>
      <?php
           include("confs/config.php");
 

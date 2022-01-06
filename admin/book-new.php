@@ -14,6 +14,7 @@
      </style>
 </head>
 <body>
+     <?php include("confs/auth.php") ?>
      <h1> New book </h1>
 
      <ul class="menu">
