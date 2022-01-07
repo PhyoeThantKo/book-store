@@ -18,3 +18,35 @@
 
      $cats = mysqli_query($conn, "SELECT * FROM categories");
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Book Store</title>
+</head>
+<body>
+     <div class="info">
+          <a href="view-cart.php">
+               ( <?php echo $cart ?> books in your cart)
+          </a>
+     </div>
+
+     <div class="slidebar">
+          <ul class="cats">
+               <li>
+                    <b> <a href="index.php"> All categories </a> </b>
+               </li>
+               <?php while ($row = mysqli_fetch_assoc($cats)):?>
+                    <li>
+                         <a href="index.php?cat=<?php echo $row['id'] ?>">
+                              <?php echo $row['name'] ?>
+                         </a>
+                    </li>
+               <?php endwhile; ?>
+          </ul>
+     </div>
+</body>
+</html>
