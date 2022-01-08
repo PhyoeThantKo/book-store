@@ -29,13 +29,14 @@
      <link rel="stylesheet" href="uicss/style.css">
 </head>
 <body>
+     <h1>Book Store</h1>
      <div class="info">
           <a href="view-cart.php">
                ( <?php echo $cart ?> books in your cart)
           </a>
      </div>
 
-     <div class="slidebar">
+     <div class="sidebar">
           <ul class="cats">
                <li>
                     <b> <a href="index.php"> All categories </a> </b>
@@ -62,12 +63,16 @@
                          </b>
 
                          <i> $<?php echo $row['price'] ?> </i>
-                         <a href="add-to-cart.php?id=<?php echo $row['id'] ?>">
+                         <a href="add-to-cart.php?id=<?php echo $row['id'] ?>" class="add-to-cart">
                          Add to cart
                          </a>
                     </li>
-                    <?php endwhile; ?>
-                </ul>
+               <?php endwhile; ?>
+          </ul>
+     </div>
+
+     <div class="footer">
+          &copy; <?php echo date("Y") ?>. All right reserved.
      </div>
 </body>
 </html>
