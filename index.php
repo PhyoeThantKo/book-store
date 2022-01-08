@@ -49,5 +49,25 @@
                <?php endwhile; ?>
           </ul>
      </div>
+
+     <div class="main">
+          <ul class="books">
+               <?php while ($row = mysqli_fetch_assoc($books)): ?>
+                    <li>
+                         <img src="admin/covers/<?php echo $row['cover'] ?>" height="150">
+                         <b>
+                              <a href="book-detail.php?id=</php echo $row['id'] ?> ">
+                                   <?php echo $row['title'] ?>
+                              </a>
+                         </b>
+
+                         <i> $<?php echo $row['price'] ?> </i>
+                         <a href="add-to-cart.php?id=<?php echo $row['id'] ?>">
+                         Add to cart
+                         </a>
+                    </li>
+                    <?php endwhile; ?>
+                </ul>
+     </div>
 </body>
 </html>
