@@ -51,7 +51,37 @@
                     <td>$<?php echo $row['price'] * $qty ?></td>
                </tr>
                <?php endforeach; ?>
+               <tr>
+                    <td colspan="3" align="right"><b>Total:</b>
+                    </td>
+                    <td> $<?php echo $total; ?> </td>
+               </tr>
           </table>
+
+          <div class="order-form">
+               <h2>Order Now</h2>
+               <form action="submit-order.php" method="post">
+                    <label for="name"> Your Name </label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="email"> Email </label>
+                    <input type="text" name="email" id="email">
+
+                    <label for="phone"> Phone </label>
+                    <input type="text" name="phone" id="phone">
+
+                    <label for="address"> Address </label>
+                    <textarea name="address" id="address"></textarea>
+
+                    <br><br>
+                    <input type="submit" name="Submit Order" >
+                    <a href="index.php"> Continue Shopping </a>
+               </form>
+          </div>
+     </div>
+
+     <div class="footer">
+          &copy; </php echo date("Y") ?> . All right reserved.
      </div>
 </body>
 </html>
