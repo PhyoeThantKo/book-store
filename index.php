@@ -57,7 +57,7 @@
                     <li>
                          <img src="admin/covers/<?php echo $row['cover'] ?>" height="150">
                          <b>
-                              <a href="book-detail.php?id=</php echo $row['id'] ?> ">
+                              <a href="book-detail.php?id=<?php echo $row['id'] ?> ">
                                    <?php echo $row['title'] ?>
                               </a>
                          </b>
