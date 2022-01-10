@@ -4,7 +4,7 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+     <title>Book List</title>
      <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,7 +31,7 @@
      <ul class="books">
           <?php while($row = mysqli_fetch_assoc($result)): ?>
           <li>
-               <img src="covers/<?php echo $row['cover'] ?>" align="right" >
+               <img src="covers/<?php echo $row['cover'] ?>" align="right" height="80" >
                <b><?php echo $row['title'] ?></b>
                <i>by <?php echo $row['author'] ?></i>
                <small>(in <?php echo $row['name'] ?>)</small>
